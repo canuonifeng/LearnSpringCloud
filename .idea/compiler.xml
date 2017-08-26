@@ -12,7 +12,6 @@
         <module name="service-feign" />
         <module name="service-hi" />
         <module name="service-miya" />
-        <module name="service-ribbon" />
         <module name="service-turbine" />
         <module name="service-zuul" />
       </profile>
