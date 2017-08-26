@@ -3,6 +3,7 @@ package com.cloud;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
@@ -31,6 +32,14 @@ public class RoleServiceApplication {
 	public Role getRole(@RequestParam String code){
 		LOG.log(Level.INFO, "role info is being called");
 		return new Role(code+"管理员", code);
+	}
+	
+	@Value("${from}")
+	private String from;
+	
+	@RequestMapping("/from")
+	public String from() {
+		return from;
 	}
 	
 	@Bean
