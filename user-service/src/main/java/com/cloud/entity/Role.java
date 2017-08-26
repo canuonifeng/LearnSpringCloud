@@ -5,6 +5,10 @@ import java.io.Serializable;
 public class Role implements Serializable{
     private String name;
     private String code;
+    
+    public Role() {
+		// TODO Auto-generated constructor stub
+	}
 
     public Role(String name, String code){
         setName(name);
