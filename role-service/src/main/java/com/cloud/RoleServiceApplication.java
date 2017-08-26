@@ -7,6 +7,7 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.cloud.entity.Role;
@@ -23,9 +24,9 @@ public class RoleServiceApplication {
 
 	private static final Logger LOG = Logger.getLogger(RoleServiceApplication.class.getName());
 
-	@RequestMapping("/get")
-	public Role getRole(){
+	@RequestMapping("/role")
+	public Role getRole(@RequestParam String code){
 		LOG.log(Level.INFO, "role info is being called");
-		return new Role("课程管理员", "course_manager");
+		return new Role(code+"管理员", code);
 	}
 }
