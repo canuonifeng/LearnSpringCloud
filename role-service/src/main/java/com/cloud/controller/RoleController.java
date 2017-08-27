@@ -24,7 +24,7 @@ public class RoleController {
 	}
 	
 	@Value("${from}")
-	public String from;
+	String from;
 	
 	@RequestMapping("/from")
 	public String from() {

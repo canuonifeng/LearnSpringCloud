@@ -15,8 +15,8 @@ public class RoleServiceApplication {
 		SpringApplication.run(RoleServiceApplication.class, args);
 	}
 	
-//	@Bean
-//	public Sampler getSample() {
-//		return new AlwaysSampler();
-//	}
+	@Bean
+	public Sampler getSample() {
+		return new AlwaysSampler();
+	}
 }
