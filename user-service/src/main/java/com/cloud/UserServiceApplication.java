@@ -40,7 +40,7 @@ public class UserServiceApplication {
     public User getUser(@RequestParam String name) {
         logger.log(Level.INFO, "calling trace user-service, get " + name + ",i am from port:" + port);
         User user = new User(name);
-        user.setRole(roleService.getRole("course_manager"));
+        user.setRole(roleService.getRole(name+"_course_manager"));
         return user;
     }
 
